@@ -171,6 +171,7 @@ void handle_nvme_io_cmd(NVME_COMMAND *nvmeCmd)
 			nvmeCPL.dword[0] = 0;
 			nvmeCPL.specific = 0x0;
 			set_auto_nvme_cpl(nvmeCmd->cmdSlotTag, nvmeCPL.specific, nvmeCPL.statusFieldWord);
+			// prj2
 			break;
 		}
 		default:
